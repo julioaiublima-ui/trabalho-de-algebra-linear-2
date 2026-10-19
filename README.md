@@ -1,20 +1,25 @@
-# Simulador de propagacao de influenza
+# Simulador de Propagação de Influenza (Web App)
 
-Este projeto usa o modelo epidemiologico SIR para estudar, de forma hipotetica,
-como a taxa de transmissao beta altera o numero de pessoas infectadas.
+Este projeto, desenvolvido para a disciplina de Álgebra Linear II do CIESA, utiliza o modelo epidemiológico SIR para estudar a propagação da influenza através de um simulador matemático interativo em formato Web App.
 
-## Executar no macOS
+## Como Executar Localmente
 
-```bash
-python3 -m pip install -r requirements.txt
-python3 simulador_influenza.py
-```
+1. Certifique-se de ter o Python instalado e abra a pasta do projeto no terminal.
+2. Instale as dependências necessárias:
+   ```bash
+   pip install -r requirements.txt
+   
+Inicie o Web App com o Streamlit:
 
-Pressione `Enter` para aceitar os valores padrao. O programa compara a
-transmissao original com reducoes de 25% e 50% e gera:
+python -m streamlit run simulador_influenza.py
 
-- `graficos_simulacao.png`: curvas de infectados para os tres cenarios;
-- `resultados_simulacao.csv`: valores diarios de suscetiveis, infectados e recuperados.
+Funcionalidades do Simulador:
+
+Interface Interativa: Altere parâmetros como população, infectados iniciais, taxa de transmissão (β), taxa de recuperação (γ) e duração em dias através de controles deslizantes (sliders). 
+
+Análise de Cenários: Compara o cenário base com reduções de 25% e 50% na taxa de transmissão, simulando o efeito de medidas de controle.
+
+Métricas e Gráficos Dinâmicos: Exibe o pico da epidemia em tempo real e plota as curvas temporais dos compartimentos SIR diretamente no navegador.
 
 Os valores representam uma simulacao matematica hipotetica, nao dados reais de
 influenza. Para o trabalho, compare os picos ao variar beta e explique como a
